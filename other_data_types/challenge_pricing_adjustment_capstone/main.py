@@ -23,10 +23,10 @@ if milk_stock < 10:
 else:
     print("Milk has sufficient stock.")
 print(grocery_inventory)
-
+# Remove apples if more than $2
 if grocery_inventory["Apples"][1] > 2:
     grocery_inventory.pop("Apples")
     print("Apples removed from inventory due to high price.")
-
+# Print updated inventory
 print("Updated Inventory:", grocery_inventory)
     
