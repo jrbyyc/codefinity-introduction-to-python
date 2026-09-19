@@ -5,12 +5,13 @@ inventory = {
     "Milk": [60, 100, 20, False],
     "Apples": [15, 50, 15, False]
 }
-
+#  Set discount threshold
 discount_threshold = 100
+
 for item in inventory:
-    current_stock, min_stock, restock_amount, on_sale = inventory[item]
-    while current_stock < min_stock:
+    current_stock, min_stock, restock_amount, on_sale = inventory[item] #unpack dictionary
+    while current_stock < min_stock: # loop thru inventory items to bump up stock level by restock amount until over minimum
         current_stock = current_stock + restock_amount
-        inventory[item][0] = current_stock
-    if current_stock > discount_threshold and not on_sale:
+        inventory[item][0] = current_stock #Update dictionary with new stock level
+    if current_stock > discount_threshold and not on_sale: #test if overstock and not on sale, put on sale if both true
         inventory[item][3] = True
