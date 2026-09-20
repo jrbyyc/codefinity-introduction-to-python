@@ -4,8 +4,8 @@ def apply_discount(price, discount=0.05):
     return discounted_price
 
 # define function to return price after adding tax. 
-def apply_tax(discounted_price, tax=0.07):
-    taxed_price = discounted_price * (1 + tax)
+def apply_tax(price, tax=0.07):
+    taxed_price = price * (1 + tax)
     return taxed_price
 
 # define function to calculate final total
